@@ -55,25 +55,11 @@ class _traceScreenState extends State<traceScreen> {
                     widget.value,
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 40,
+                      fontSize: 25,
                     ),
                   ),
 
-/*               Padding(
-              padding: EdgeInsets.all(32),
-              child: FlatButton(
-                padding: EdgeInsets.all(32),
-                onPressed: () async {},
-                child: Text(
-                  "          Tracin          ",
-                  style: TextStyle(
-                      color: Colors.blue, fontWeight: FontWeight.bold),
-                ),
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(color: Colors.blue, width: 3.0),
-                    borderRadius: BorderRadius.circular(20.0)),
-              ),
-            ) */
+
                   ],
                 ),
               ),

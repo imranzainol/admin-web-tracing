@@ -34,7 +34,6 @@ class _finallyScreenState extends State<finallyScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    // This size provide us total height and width  of our screen
     return Scaffold(
       body: Container(
         height: size.height,
@@ -174,6 +173,7 @@ class _finallyScreenState extends State<finallyScreen> {
               child: FlatButton(
                 padding: EdgeInsets.all(32),
                 onPressed: () async {
+
                   var docRef = await FirebaseFirestore.instance.collection("Users")
                       .where("riskLevel",isEqualTo:4).get();
                   docRef.docs.forEach((result) {
@@ -227,7 +227,6 @@ class _finallyScreenState extends State<finallyScreen> {
               ),
             ),
             
-            // it will cover 2/3 of free spaces
           ],
         ),
       ),
