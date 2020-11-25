@@ -30,6 +30,7 @@ class _finallyScreenState extends State<finallyScreen> {
   String emailA = "";
   String emailB = "";
   String emailC = "";
+  String locate = "";
 
   @override
   Widget build(BuildContext context) {
@@ -37,22 +38,38 @@ class _finallyScreenState extends State<finallyScreen> {
     return Scaffold(
       body: Container(
         height: size.height,
-        // it will take full width
         width: size.width,
         decoration: BoxDecoration(
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Stack(
           children: <Widget>[
 
             CustomAppBar(),
             // It will cover 1/3 of free spaces
+
+
               Align(
               alignment: Alignment.topCenter,
               child: Padding(
                 padding: EdgeInsets.all(32),
                 child: Column(
                   children: [
+                  
+                  Text(
+                    " ",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 40,
+                    ),
+                  ),
+                  
+                  Text(
+                    " ",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 40,
+                    ),
+                  ),
 
                   Text(
                     "Infected",
@@ -78,7 +95,7 @@ class _finallyScreenState extends State<finallyScreen> {
                     ),
                   ),
 
-                                    Text(
+                  Text(
                     " ",
                     style: TextStyle(
                       color: Colors.black,
@@ -111,7 +128,7 @@ class _finallyScreenState extends State<finallyScreen> {
                     ),
                   ),
 
-                                    Text(
+                  Text(
                     " ",
                     style: TextStyle(
                       color: Colors.black,
@@ -143,7 +160,7 @@ class _finallyScreenState extends State<finallyScreen> {
                     ),
                   ),
 
-                                    Text(
+                  Text(
                     " ",
                     style: TextStyle(
                       color: Colors.black,
@@ -181,6 +198,7 @@ class _finallyScreenState extends State<finallyScreen> {
                     qrData = result.data()['fullName'];
                     phoneNo = result.data()['phoneNo'];
                     email = result.data()['email'];
+                  
                     });
                   });
                   var docRefA = await FirebaseFirestore.instance.collection("Users")
@@ -190,6 +208,7 @@ class _finallyScreenState extends State<finallyScreen> {
                     qrDataA = result.data()['fullName'];
                     phoneNoA = result.data()['phoneNo'];
                     emailA = result.data()['email'];
+
                     });
                   });
                   var docRefB = await FirebaseFirestore.instance.collection("Users")
@@ -226,10 +245,33 @@ class _finallyScreenState extends State<finallyScreen> {
                 ),
               ),
             ),
+
+
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Padding(
+                padding: EdgeInsets.all(32),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    MyImage(),
+                  ],
+                ),
+              ),
+            ),
             
           ],
         ),
       ),
     );
+  }
+}
+
+class MyImage extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    AssetImage image=new AssetImage('image/contact.jpeg');
+    Image logo=new Image(image: image,width: 400,height: 300,);
+    return logo;
   }
 }

@@ -113,7 +113,7 @@ class _LogInState extends State<LogIn> {
               borderRadius: BorderRadius.circular(15),
             ),
             color: Color(0xFF039BE5),
-            child: Text("Log In",
+            child: Text("          Log In          ",
             style: TextStyle(color: Colors.white,
               fontWeight: FontWeight.bold,fontSize: 20),),
           padding: EdgeInsets.all(10),
@@ -128,13 +128,6 @@ class _LogInState extends State<LogIn> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
 
-                          Text(
-                            "You do not have an account?",
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 14,
-                            ),
-                          ),
 
                           SizedBox(
                             width: 8,
@@ -147,22 +140,8 @@ class _LogInState extends State<LogIn> {
                             child: Row(
                               children: [
 
-                                Text(
-                                  "Sign Up",
-                                  style: TextStyle(
-                                    color: kPrimaryColor,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-
                                 SizedBox(
                                   width: 8,
-                                ),
-
-                                Icon(
-                                  Icons.arrow_forward,
-                                  color: kPrimaryColor,
                                 ),
                                 
                               ],

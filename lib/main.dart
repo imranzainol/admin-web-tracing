@@ -123,48 +123,6 @@ class _HomePageState extends State<HomePage> {
             ),
 
             Align(
-              alignment: Alignment.bottomLeft,
-              child: Padding(
-                padding: EdgeInsets.all(32),
-                child: Row(
-                  children: [
-
-                    Icon(
-                      Icons.keyboard_arrow_left,
-                      color: Colors.white,
-                      size: 28,
-                    ),
-
-                    SizedBox(
-                      width: 8,
-                    ),
-
-                    Text(
-                      "HOME",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                      ),
-                    ),
-
-                  ],
-                ),
-              ),
-            ),
-
-            Align(
-              alignment: Alignment.topRight,
-              child: Padding(
-                padding: EdgeInsets.all(32),
-                child: Icon(
-                  Icons.menu,
-                  color: Color(0xFF039BE5),
-                  size: 28,
-                ),
-              ),
-            ),
-
-            Align(
               alignment: Alignment.bottomRight,
               child: Padding(
                 padding: EdgeInsets.all(32),
